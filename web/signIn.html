@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="signIn.css">
+    <title>Login - Dominic's Book Store</title>
+</head>
+
+<body onpageshow="ready()">
+<script>
+    document.onreadystatechange = ready();
+
+    function ready() {
+        if (document.readyState == "complete") {
+            document.body.style.display = "block";
+        } else {
+            document.body.style.display = "none";
+        }
+        ;
+    }
+</script>
+
+<div id="box_1">
+    <img src="https://24233895.s21i.faiusr.com/2/3/ABUIABACGAAg2IHkkAYoxPz0pAIwwB843BE.jpg" alt="background-hero"
+         id="background">
+    <div id="box_title">
+        <h2 id="title_h2">Welcome to</h2>
+        <h1 id="title_h1">Dominic's Book Store</h1>
+    </div>
+
+    <div id="box_login">
+        <h1>Sign In</h1>
+        <div id="box_form">
+            <form method="post" action="signIn.jsp" onSubmit="return check()">
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="ipt_email" name="userEmail" required onblur="loginChange()"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" id="ipt_password" name="userPassword" required onblur="loginChange()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Continue</button>
+                        </td>
+                        <td>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <p id="login_note"></p>
+            <script>
+                function loginChange() {
+                    let acc = document.getElementById("ipt_account").value
+                    let psd = document.getElementById("ipt_password").value
+                    if ((acc != null) && (acc != "")) {
+                        document.getElementById("title_h2").innerHTML = "welcome " + "@" + acc + " to"
+                        hideConnect()
+                    } else {
+                        document.getElementById("title_h2").innerHTML = "welcome to"
+                        if ((psd != null) && (psd != ""))
+                            hideConnect()
+                        else
+                            document.getElementById("connect").style.opacity = "1"
+                        document.getElementById("connect").style.flex = "2"
+
+                    }
+                }
+
+                function hideConnect() {
+                    document.getElementById("connect").style.opacity = "0"
+                    document.getElementById("connect").style.flex = "0"
+                }
+            </script>
+        </div>
+        <div id="connect">
+            <hr>
+            <h1>Sign Up</h1>
+            <form method="post" action="signUp.jsp" onSubmit="return check()">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" id="ipt_signUpName" name="userName" required></td>
+
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="ipt_signUpEccount" name="userEmail" required>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" id="ipt_signUpPassword" name="userPassword" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Continue</button>
+                        </td>
+                        <td>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="box_copyright">
+        <p>photo at <a
+                href="https://maps.apple.com/?address=%E4%B8%AD%E5%9B%BD%E8%BE%BD%E5%AE%81%E7%9C%81%E5%A4%A7%E8%BF%9E%E5%B8%82%E8%A5%BF%E5%B2%97%E5%8C%BA%E4%B8%AD%E5%B1%B1%E8%B7%AF180%E5%8F%B7(%E4%B8%80%E4%BA%8C%E4%B9%9D%E8%A1%97%E5%9C%B0%E9%93%81%E7%AB%99A%E5%8F%A3%E6%AD%A5%E8%A1%8C330%E7%B1%B3)&auid=1118368688325818&ll=38.912067,121.619854&lsp=57879&q=%E5%A4%A7%E8%BF%9E%E5%B8%82%E8%A7%84%E5%88%92%E5%B1%95%E7%A4%BA%E4%B8%AD%E5%BF%83(%E6%9A%82%E5%81%9C%E5%BC%80%E6%94%BE)">Dalian
+            Urban Planning Exhibition Center</a> (click to show in Apple Map)</p>
+        <p>copyright: Dominic Wang</p>
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

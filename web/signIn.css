@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: blue;
+}
+
+#box_load{
+    background-color: black;
+    color: white;
+    height: 100%;
+    display: block;
+}
+
+#title_h1 {
+    font-size: 50px;
+    color: white;
+    line-height: 50px;
+}
+
+#title_h2 {
+    font-size: 30px;
+    color: white;
+    line-height: 30px;
+}
+
+#box_1 {
+    position: relative;
+}
+
+#background {
+    max-width: 100%;
+}
+
+#box_title {
+    max-width: 37%;
+    position: fixed;
+    top: 40%;
+    left: 13%;
+}
+
+
+#box_login {
+    position: fixed;
+    top: 25%;
+    left: 60%;
+    width: 400px;
+    height: 400px;
+    padding: 30px 50px 40px 50px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 auto;
+    opacity: 0.5;
+    /*透明度*/
+    display: flex;
+    flex-direction: column;
+    transition: ease-in-out 0.3s;
+}
+
+#box_form {
+    flex: 1;
+    opacity: 1;
+}
+
+#connect {
+    flex: 2;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#box_post {
+    flex: 0;
+    opacity: 0;
+}
+
+#box_login:hover {
+    opacity: 1;
+}
+
+#box_copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 88%;
+    text-align: center;
+    line-height: 10px;
+    transition: 0.3s;
+}
+
+#box_copyright:hover {
+    background-color: black;
+    color: white;
+}
+
+#box_copyright:hover a {
+    color: white;
+}
